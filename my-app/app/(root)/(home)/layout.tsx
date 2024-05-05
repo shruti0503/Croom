@@ -3,6 +3,16 @@ import { ReactNode } from 'react'
 import Navbar from '@/components/ui/Navbar'
 import Sidebar from '@/components/ui/Sidebar'
 import { sidebarLinks } from '@/constants'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Yoom",
+  description: "Video Calling app by -shruti vishwakarma",
+  icons:{
+    icon:'/icons/logo.svg'
+  }
+};
+
 function RootLayout({children}:{children:ReactNode}) {
   return (
     <main className='relative'>

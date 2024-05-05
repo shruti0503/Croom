@@ -14,6 +14,7 @@ function Meeting({params:{id}}:{params:{id:string}}) {
   const {user, isLoaded}=useUser();
   const [isSetupComplete, setIsSetupComplete]=useState(false)
   const {call, isCallLoading}=useGetCallById(id);
+ // const { id } = useParams<{ id: string }>();
   
 
   if(!isLoaded || isCallLoading) return <Loader />
@@ -26,7 +27,9 @@ function Meeting({params:{id}}:{params:{id:string}}) {
         {
           !isSetupComplete ? (
             <MeetingSetUp 
-            />
+            //@ts-ignore
+              setIsSetupComplete={setIsSetupComplete}     
+             />
           ):(
             <MeetingRoom />
           )

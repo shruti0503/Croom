@@ -13,20 +13,21 @@ import {
 
   
 
-interface MeetingModalProps{
-    isOpen:boolean;
-    onClose:()=>void;
-    title:string;
+  interface MeetingModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    title: string;
     className?: string;
-    Children?:ReactNode;
-    handleClick?:()=>string;
-    buttonText?:String;
-    image?:string;
-    buttonIcon:string;
+    children?: ReactNode;
+    handleClick?: () => void;
+    buttonText?: string;
+    instantMeeting?: boolean;
+    image?: string;
+    buttonClassName?: string;
+    buttonIcon?: string;
+  }
 
-}
-
-function MeetingModal({isOpen, onClose, title,className, Children, handleClick, buttonText,
+function MeetingModal({isOpen, onClose, title,className, children, handleClick, buttonText,
     image, buttonIcon
 }:MeetingModalProps) {
   return (
@@ -41,7 +42,7 @@ function MeetingModal({isOpen, onClose, title,className, Children, handleClick, 
                
             )}
              <h1 className={cn('text-3xl font-bold leading-[42px]', className)}>{title}</h1>
-                {Children}
+                {children}
              <Button className="bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0"
              onClick={handleClick}
              
