@@ -37,12 +37,15 @@ import {
 
      },[user, isLoaded]);
 
-     if(!videoClient) return <Loader />
+    // if(!videoClient) return <Loader />
    
     
 
     return(
-        <StreamVideo client={videoClient}>
+        <StreamVideo 
+        //@ts-ignore
+        client={videoClient}
+        >
             {children}
         </StreamVideo>
 
