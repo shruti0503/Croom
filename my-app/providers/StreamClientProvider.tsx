@@ -19,7 +19,7 @@ import {
 
     const [videoClient, setVideoClient]=useState<StreamVideoClient>()
     const {user, isLoaded}=useUser();
-
+//clerk cvgeckl
     useEffect(()=>{
         if(!isLoaded || !user) return;
         if(!apiKey) throw new Error('Stream API key missing')
@@ -37,7 +37,7 @@ import {
 
      },[user, isLoaded]);
 
-    // if(!videoClient) return <Loader />
+     if(!videoClient) return <Loader />
    
     
 
