@@ -29,10 +29,11 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
 
 
     setVideoClient(client);
+    console.log("client is",client )
 
   }, [user, isLoaded]);
 
-  // if (!videoClient) return <Loader />;
+   if (!videoClient) return <Loader />;
 
   return <StreamVideo client={videoClient!}>{children}</StreamVideo>;
 };
