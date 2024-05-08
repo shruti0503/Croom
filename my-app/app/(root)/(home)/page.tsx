@@ -13,7 +13,7 @@ function Home() {
             lg:p-11'>
                 <h2 className='glassmorphism max-w-[270px]
                 rounded py-2 text-center text-base font-normal'>
-                    Upcoming Meething at : </h2>
+                    Upcoming Meeting at : </h2>
                     <div className='flex flex-col gap-2'>
                         <h1 className='text-4xl font-extrabold lg:text-7xl'>
                          {time}
